@@ -1,0 +1,6 @@
+<h2>update</h2>
+<form action="/todo/" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="update">
+</form>

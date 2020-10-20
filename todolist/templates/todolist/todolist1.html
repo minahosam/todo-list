@@ -1,0 +1,11 @@
+<h2>class based views</h2>
+<form  method="POST" action="/todo/">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="add">
+</form>
+{% for post in object_list %}
+    <p>{{post}}</p>
+    <a href="{% url 'list1:update1' post.pk %}">update</a>
+    <a href="">delete</a>
+{% endfor %}
